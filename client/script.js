@@ -38,7 +38,12 @@ sayHelloButton.addEventListener('mouseover', changeColorButton)
 */
 
 // CODE HERE
+function returnColorButton (event) {
+    document.getElementById('say-hello-button').style.backgroundColor = '#EFEFEF'
+    document.getElementById('say-hello-button').style.color = 'black'
+}
 
+sayHelloButton.addEventListener('mouseout', returnColorButton)
 
 // PROBLEM 4
 /*
