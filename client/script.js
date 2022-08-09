@@ -1,4 +1,4 @@
-////////////////////////////////////////////////
+//////////////////////////////////////////////
 //THE TEST SERVER IS RUNNING ON LOCALHOST:3000//
 ////////////////////////////////////////////////
 
@@ -20,7 +20,13 @@
 */
 
 // CODE HERE
+function changeColorButton (event) {
+    // ask norman about this 
+    document.getElementById('say-hello-button').style.backgroundColor = 'black';
+    document.getElementById('say-hello-button').style.color = 'white';
+}
 
+sayHelloButton.addEventListener('mouseover', changeColorButton)
 
 // PROBLEM 3
 /*
