@@ -2,6 +2,8 @@
 //THE TEST SERVER IS RUNNING ON LOCALHOST:3000//
 ////////////////////////////////////////////////
 
+const { default: axios } = require("axios");
+
 // PROBLEM 1
 /*
     In the index.html file in this folder there is a button with an id of 'say-hello-button'!
@@ -64,7 +66,7 @@ const sayHello = () => {
 // DO NOT EDIT FUNCTION
 
 // CODE HERE
-// let helloText = document.querySelector("#hello-text")
+let helloText = document.querySelector("#hello-text")
 
 sayHelloButton.addEventListener('click', sayHello)
 
@@ -81,6 +83,10 @@ sayHelloButton.addEventListener('click', sayHello)
 
 const ohMy = () => {
     // YOUR CODE HERE
+    axios.get('http://localhost:3000/animals')
+    .then(response => {
+        console.log(response.data);
+    })
 }
 
 document.getElementById('animals-button').addEventListener('click', ohMy)
