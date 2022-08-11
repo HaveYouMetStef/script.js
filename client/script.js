@@ -64,7 +64,9 @@ const sayHello = () => {
 // DO NOT EDIT FUNCTION
 
 // CODE HERE
+// let helloText = document.querySelector("#hello-text")
 
+sayHelloButton.addEventListener('click', sayHello)
 
 // PROBLEM 5 
 /*
