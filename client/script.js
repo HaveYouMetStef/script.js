@@ -3,6 +3,8 @@
 ////////////////////////////////////////////////
 
 
+
+
 // PROBLEM 1
 /*
     In the index.html file in this folder there is a button with an id of 'say-hello-button'!
@@ -139,8 +141,13 @@ document.getElementById('repeat-button').addEventListener('click', repeatMyParam
 */
 
 // CODE HERE
-
-
+const getQuery = () => {
+    axios.get('http://localhost:3000/query-test/?name=stef')
+    .then(response => {
+        console.log(response.data);
+    })
+}
+document.getElementById('query-button').addEventListener('click', getQuery)
 
 ////////////////
 //INTERMEDIATE//
