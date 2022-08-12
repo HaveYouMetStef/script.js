@@ -2,8 +2,6 @@
 //THE TEST SERVER IS RUNNING ON LOCALHOST:3000//
 ////////////////////////////////////////////////
 
-const { default: axios } = require("axios");
-
 // PROBLEM 1
 /*
     In the index.html file in this folder there is a button with an id of 'say-hello-button'!
@@ -88,7 +86,7 @@ const ohMy = () => {
         console.log(response.data);
     })
 }
-
+// let animalsBtn = document.querySelector("#animals-button")
 document.getElementById('animals-button').addEventListener('click', ohMy)
 
 
@@ -107,7 +105,14 @@ document.getElementById('animals-button').addEventListener('click', ohMy)
 
 const repeatMyParam = () => {
     //YOUR CODE HERE
+    const repeatString = 'dog'
+    axios.get(`http://localhost:3000/repeat/${repeatString}`)
+        .then(response => {
+            console.log(response.data);
+        })
 }
+
+document.getElementById('repeat-button').addEventListener('click', repeatMyParam)
 
 // PROBLEM 7
 /*
