@@ -2,6 +2,7 @@
 //THE TEST SERVER IS RUNNING ON LOCALHOST:3000//
 ////////////////////////////////////////////////
 
+
 // PROBLEM 1
 /*
     In the index.html file in this folder there is a button with an id of 'say-hello-button'!
@@ -109,6 +110,9 @@ const repeatMyParam = () => {
     axios.get(`http://localhost:3000/repeat/${repeatString}`)
         .then(response => {
             console.log(response.data);
+            let repeatText = document.getElementById("repeat-text");
+            repeatText.textContent = response.data
+            repeatText.style.display = 'block'
         })
 }
 
